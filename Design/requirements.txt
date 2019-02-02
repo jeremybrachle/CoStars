@@ -4,5 +4,11 @@ Co-Stars App Requirements
 2. Title screen with button to begin
 3. Menu screen with level selection (for now the app will have pre-generated actors and movie selections... serves as a proof of concept)
   a. square tiles with numbers inside
-  b. levels/tiles that have not been completed will be grey, completed will be a shade of gold
+  b. levels/tiles that have not been completed will be grey, completed will be a shade of gold with the best score (achieved by current user so far) on it
 4. Point system (1 - 3 stars) based on a pre-calculated metric of the least number of connections possible
+  a. the program will calculate the least number of connections before the game starts and judge the player based on how close to this number they get
+5. The player will have 3 different zoom levels during a game:
+  a. zoomed out: both actors and their descending trees will be zoomed all the way out and the text sizes will be reduced
+  b. zoom left: actor tree on left will zoom to frame so the user can edit the tree
+  c. zoom right: same for actor tree on right
+6. button for connecting the trees
