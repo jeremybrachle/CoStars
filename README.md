@@ -1,5 +1,5 @@
 # CoStars
-This is a game I developed during SMU's Hackathon 2019. I came up with the idea several years ago, but this is the first time I have implemented any code to develop it. <br><br> Game idea: copyright 2017
+This is a game I developed during SMU's Hackathon 2019. I came up with the idea several years ago, but this is the first time I have implemented any code to develop it. <br><br> Game idea: copyright 2017 by Jeremy Brachle
 
 <hr>
 
