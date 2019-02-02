@@ -22,8 +22,8 @@ In this single player game, a player is given the names of two actors. With thes
 
 Here is an example game:<br>
 __George Clooney__ and __Matt Damon__
-1. Right away the player could say _Ocean's Eleven_ (2001)
-2. However if the player didn't know both these actors were both in this movie, they could select _The Perfect Storm_ as another movie that George Clooney has starred in
+1. Right away the player could say _Ocean's Eleven_ (2001) since both George Clooney and Matt Damon starred in it
+2. However if the player didn't know that both these actors were in this movie, they could select _The Perfect Storm_ as another movie that George Clooney has starred in
 3. In _The Perfect Storm_, George Clooney starred alongside Mark Wahlberg
 4. Finally, Mark Wahlberg starred in _The Departed_ alongside Matt Damon
 
