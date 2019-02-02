@@ -16,7 +16,7 @@ While this was a fun party game, I craved a more rigorous test of my movie knowl
 # High-Level Description:
 In this single player game, a player is given the names of two actors. With these two actors, they must decide if they have ever been co-stars in the same movie. If the player cannot think of at least one movie that both actors had been in or if there simply exists _no_ movie with both given actors, then they move down one level of abstraction... This is the complicated step where the true depth of the player's movie trivia is tested: <br>
 * The player can take one given actor and select any other movie the actor has been in that the player can think of
-* From this movie, the player must choose a new actor in this selected movie and think of another movie that this newly selected actor been in
+* From this movie, the player must choose a new actor in this selected movie and think of another movie that this newly selected actor has been in
 * They player then works their way down until they reach a movie that contains an actor that has been costars with the other given actor
 * The player could also work their way down from both given actors until they reach a common movie from their descending trees of costars
 
