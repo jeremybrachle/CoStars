@@ -25,7 +25,7 @@ __George Clooney__ and __Matt Damon__
 3. In _The Perfect Storm_, George Clooney starred alongside Mark Wahlberg
 4. Finally, Mark Wahlberg starred in _The Departed_ alongside Matt Damon
 
-<img src="costarsgame.png">
+<img src="Design/costarsgame.png">
 
 # Program Implementation
 This game will be made into a mobile phone application using Ionic, a cross-platform mobile SDK, similar to Angular.
