@@ -11,7 +11,7 @@ At a holiday work party a few years ago, my manager suggested we play an icebrea
 * __Player 2__ would think of a movie that actor had been in or an actor in that movie, respectively.
 * __Player 1 or 3__ (depending on how many players there were) would then cycle between actor/movie until a player could not think of a response.
 
-While this was a fun party game, I craved a more rigorous test of my movie knowledge. It got me thinking about making a new actor/movie game where a player would be tested on their knowledge of who acted in what and with whom. <br>Eventually I came up with this idea:
+While this was a fun party game, I craved a more rigorous test of my movie knowledge. It got me thinking about making a _new_ actor/movie game where a player would be tested on a more in-depth level of their knowledge of who acted in what and with whom than this party game. <br>Eventually I came up with the following idea:
 
 # High-Level Description:
 In this single player game, a player is given the names of two actors. With these two actors, they must decide if they have ever been co-stars in the same movie. If the player cannot think of at least one movie that both actors had been in or if there simply exists _no_ movie with both given actors, then they move down one level of abstraction... This is the complicated step where the true depth of the player's movie trivia is tested: <br>
