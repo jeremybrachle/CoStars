@@ -1,6 +1,6 @@
 # CoStars
 <img src="Design/Co-Stars.png">
-CoStars is a game I developed during SMU's Hackathon 2019. I came up with the general idea several years ago and this is the first time I have implemented any code to develop it. <br><br> Game idea: copyright 2017 by Jeremy Brachle
+CoStars is a game I developed during SMU's Hackathon 2019. I came up with the general idea several years ago and this is the first time I have implemented any code to develop it. <br><br> Game idea and logo: copyright 2017 by Jeremy Brachle
 
 <hr>
 
