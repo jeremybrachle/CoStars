@@ -1,0 +1,8 @@
+Co-Stars App Requirements
+
+1. Splash Screen with logo
+2. Title screen with button to begin
+3. Menu screen with level selection (for now the app will have pre-generated actors and movie selections... serves as a proof of concept)
+  a. square tiles with numbers inside
+  b. levels/tiles that have not been completed will be grey, completed will be a shade of gold
+4. Point system (1 - 3 stars) based on a pre-calculated metric of the least number of connections possible
