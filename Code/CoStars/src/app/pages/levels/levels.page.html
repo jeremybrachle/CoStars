@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Select Level</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-card *ngFor="let level of levels">
+      <ion-card-header>
+        <ion-card-title>Level: {{level.number}}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{level.actor1}} <br> {{level.actor2}}
+      </ion-card-content>
+
+    </ion-card>
+  </ion-list>
+    
+
+  
+
+</ion-content>
