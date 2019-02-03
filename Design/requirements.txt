@@ -1,5 +1,7 @@
 Co-Stars App Requirements
 
+These are the requirements/features I am mandating for this to be considered a "working" application.
+
 1. Splash Screen with logo
 2. Title screen with button to begin
 3. Menu screen with level selection (for now the app will have pre-generated actors and movie selections... serves as a proof of concept)
@@ -11,4 +13,23 @@ Co-Stars App Requirements
   a. zoomed out: both actors and their descending trees will be zoomed all the way out and the text sizes will be reduced
   b. zoom left: actor tree on left will zoom to frame so the user can edit the tree
   c. zoom right: same for actor tree on right
-6. button for connecting the trees
+6. Button for connecting the trees (will validate whether or not the trees have been created properly)
+7. Game will save if player exits the current level (the tree they have created thus far)
+8. Players can reset their current game by tapping the question mark icon in top right corner during a game
+9. Player has option to choose computer aid on/off:
+  a. on - the computer will always check the bottom most pairing after every move to see if a valid match on the left and right trees
+  b. off - the player must manually press "connect" button to confirm the trees they have made and the computer will verify NOW if the trees are correct
+10. The computer will forgive the player if they actually had a valid pairing earlier in the game and didn't realize it (when playing in non-computer assisted mode)
+11. Win conditions (computer verifies if bottom most vertices have following matches)
+  a. movie/movie (left tree and right tree has a matching movie at the bottom)
+  b. actor/actor (left tree and right tree has a matching actor at the bottom)
+  c. movie/actor (left tree has a movie that the right tree's actor has been in)
+  d. actor/movie (left tree has an actor that has been in the right tree's movie)
+12. Scoring:
+  a. 3 stars (highest score: the player builds the valid tree with the least number of edges possible)
+  b. 2 stars (middle score: the player builds a valid tree with fewer than 5 more edges than the best route)
+  c. 1 star (lowest score: the player builds a valid tree with more than 5 edges over the best route)
+13. Essentially the player wants to create a U-shaped connection between the two actors
+  a. Both actors could have been in the same movie
+  b. Both actors could be connected for costarring with the same actor in different movies
+  c. Connected by starring in movies with costars that have been in the same movie
