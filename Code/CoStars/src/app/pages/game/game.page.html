@@ -1,9 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>game</ion-title>
+    <ion-title>Level {{currLevel.levelNumber}}</ion-title>
+    <ion-back-button [routerLink]="['/levels']"></ion-back-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-
+  {{currLevel.actor1}}
 </ion-content>

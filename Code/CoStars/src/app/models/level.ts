@@ -5,3 +5,4 @@ export class Level {
       public actor2: string
       ) { }
   }
+
