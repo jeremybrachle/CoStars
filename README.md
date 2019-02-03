@@ -14,7 +14,7 @@ At a holiday work party a few years ago, my manager suggested we play an icebrea
 While this was a fun party game, I craved a more rigorous test of my movie knowledge. It got me thinking about making a _new_ actor/movie game where a player would be tested on a more in-depth level of their knowledge of who acted in what and with whom than this party game. <br>Eventually I came up with the following idea:
 
 # High-Level Description:
-In this single player game, a player is given the names of two actors. With these two actors, they must decide if they have ever been co-stars in the same movie. If the player cannot think of at least one movie that both actors had been in or if there simply exists _no_ movie with both given actors, then they move down one level of abstraction... This is the complicated step where the true depth of the player's movie trivia is tested: <br>
+In this single player game, a player is given the names of two actors. With these two actors, they must decide if they have ever been co-stars in the same movie. If the player cannot think of at least one movie that both actors have been in or if there simply exists _no_ movie with both given actors, then they move down one level of abstraction... This is the complicated step where the true depth of the player's movie trivia is tested: <br>
 * The player can take one given actor and select any movie the actor has been in that the player can think of
 * From this movie, the player must choose a new actor in this selected movie and think of another movie that this newly selected actor has been in
 * They player then works their way down until they reach a movie that contains an actor that has been costars with the other given actor
