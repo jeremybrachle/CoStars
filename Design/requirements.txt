@@ -33,3 +33,4 @@ These are the requirements/features I am mandating for this to be considered a "
   a. Both actors could have been in the same movie
   b. Both actors could be connected for costarring with the same actor in different movies
   c. Connected by starring in movies with costars that have been in the same movie
+14. Repeats in the graph are NOT allowed
