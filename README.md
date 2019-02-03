@@ -19,6 +19,7 @@ In this single player game, a player is given the names of two actors. With thes
 * From this movie, the player must choose a new actor in this selected movie and think of another movie that this newly selected actor has been in
 * The player then works their way down until they reach a movie that contains an actor that has been costars with the other given actor
 * The player could also work their way down from both given actors until they reach a common movie from their descending trees of costars
+* Ultimately, the player wants to make a U-shaped graph connecting the two given actors by common costars and movies
 
 Here is an example game:<br>
 __George Clooney__ and __Matt Damon__
