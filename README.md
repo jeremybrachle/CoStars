@@ -33,4 +33,4 @@ __George Clooney__ and __Matt Damon__
 This game will be made into a mobile phone application using Ionic, a cross-platform mobile SDK, similar to Angular. In the game, the player will be given two actors and must build trees of movies and costars until the two actors are connected. Finally the player is judged on how many connections they build to combine the actors, based on a pre-calculated score of the best route. The application will pull from some movie database, either created by me or that previously exists.
 
 # SMU Hackathon 2019 and Beyond...
-My first implementation of this application will begin during SMU's 2019 Hackathon to produce a reasonably deliverable product within 24 hours. Of course, I will continue developing after this deadline to fully realize my dream of developing this game. 
+My first implementation of this application will begin during SMU's 2019 Hackathon to produce a reasonably working product within 24 hours. Of course, I will continue developing after this deadline to fully realize my dream of developing this game. 
