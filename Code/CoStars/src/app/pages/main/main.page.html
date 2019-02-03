@@ -1,16 +1,17 @@
 
-<ion-content padding>
-    <ion-img class="logo" src="../../../assets/images/Co-Stars.png"></ion-img>
-</ion-content> 
+<ion-content>
+    <div class="logo">
+        <ion-img src="../../../assets/images/Co-Stars.png"></ion-img>
+    </div>
+        
+    <div class="centerButton">
+        <ion-button class="beginButtonStyling" [routerLink]="['/levels']">play!</ion-button> 
+    </div>    
+</ion-content>
 
 
-  <ion-content>
-      <div class="centerButton">
-        <ion-button class="begin" [routerLink]="['/levels']">play!</ion-button> 
-      </div>    
-</ion-content>  
-
-
-
-
-
+<ion-footer>
+        <ion-toolbar>
+          <ion-title>&copy; 2019 Jeremy Brachle</ion-title>
+        </ion-toolbar>
+</ion-footer>
