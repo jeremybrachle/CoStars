@@ -5,12 +5,7 @@
 </ion-header>
 
 <ion-content>
-
   <ion-list>
-    <!-- display the levels that have been created, 
-      load the selected level into the level select service when clicked, 
-      then navigate to that page
-     -->
     <ion-card *ngFor="let level of levels" (click)="beginGame(level)" [routerLink]="['/game']">
       <ion-card-header>
         <ion-card-title>Level: {{level.number}}</ion-card-title>
@@ -21,8 +16,4 @@
       </ion-card-content>
     </ion-card>
   </ion-list>
-    
-
-  
-
 </ion-content>

@@ -1,10 +1,13 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Level {{currLevel.levelNumber}}</ion-title>
-    <ion-back-button [routerLink]="['/levels']"></ion-back-button>
+    <ion-back-button text="Exit" [routerLink]="['/levels']"></ion-back-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   {{currLevel.actor1}}
+
+<app-given-actor></app-given-actor>
+
 </ion-content>
