@@ -34,3 +34,4 @@ These are the requirements/features I am mandating for this to be considered a "
   b. Both actors could be connected for costarring with the same actor in different movies
   c. Connected by starring in movies with costars that have been in the same movie
 14. Repeats in the graph are NOT allowed
+15. The player will be able to remove branches in the tree if they feel like they are going down a route that doesn't not lead to a solution (this will remove any nodes below the one deleted)
