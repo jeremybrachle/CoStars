@@ -1,0 +1,26 @@
+<ion-card>
+  <div (click)="deleteNode()">
+    <ion-icon color="customRed" name="remove-circle-outline"></ion-icon>
+  </div>
+    
+    <ion-card-content>
+      <div>
+        <ion-icon name="person"></ion-icon>
+        <!-- <ion-icon name="videocam"></ion-icon> -->
+      </div>
+      <div >
+        <label style="font-size: 0.6em;">
+          {{nodeName}}
+        </label>
+      </div>
+    </ion-card-content>
+
+  <div (click)="addNode()">
+    <ion-icon color="customGreen" name="add-circle-outline"></ion-icon>
+  </div>
+</ion-card>
+
+<!-- some type of trailing to connect to next card: -->
+<div>
+    |
+</div>

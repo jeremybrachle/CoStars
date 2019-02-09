@@ -5,9 +5,57 @@
   </ion-toolbar>
 </ion-header>
 
+<!--
+
+
 <ion-content>
-  {{currLevel.actor1}}
+    <ion-item-group>
+      <ion-item-divider color="light" sticky>A</ion-item-divider>
+      <ion-item>Angola</ion-item>
+      <ion-item>Argentina</ion-item>
+      <ion-item>Angola</ion-item>
+      <ion-item>Argentina</ion-item>
+      <ion-item>Angola</ion-item>
+      <ion-item>Argentina</ion-item>
+      <ion-item>Angola</ion-item>
+      <ion-item>Argentina</ion-item>
+      <ion-item>Angola</ion-item>
+      <ion-item>Argentina</ion-item>
 
-<app-given-actor></app-given-actor>
+      <ion-item>Angola</ion-item>
+      <ion-item>Argentina</ion-item>
+      <ion-item>Angola</ion-item>
+      <ion-item>Argentina</ion-item>
+    </ion-item-group>
+  </ion-content>
+-->
 
+<ion-content>
+  <ion-grid>
+    <ion-item-group>
+      <ion-row>
+
+        <ion-col text-center> 
+
+          
+          <app-tree-node [nodeName]="currLevel.actor1" [nodeType]="'actor'"></app-tree-node>
+          <app-tree-node [nodeName]="currLevel.actor1" [nodeType]="'actor'"></app-tree-node>
+
+
+        </ion-col>
+      
+        <ion-col text-center>
+          <app-tree-node [nodeName]="currLevel.actor2" [nodeType]="'actor'"></app-tree-node>
+          <app-tree-node [nodeName]="currLevel.actor2" [nodeType]="'actor'"></app-tree-node>
+        </ion-col>
+
+      </ion-row>
+    </ion-item-group>
+  </ion-grid>
 </ion-content>
+
+
+<!--
+This will be a featured implemented down the line where the bottom-most edge on the least built tree will stick to the top when scrolling down
+<ion-item-divider style="background-color: white;" sticky><app-given-actor [actorName]="currLevel.actor2"></app-given-actor></ion-item-divider>
+-->
