@@ -8,7 +8,7 @@
     <ion-list>
     <ion-card *ngFor="let level of levels" (click)="beginGame(level)" [routerLink]="['/game']">
       <ion-card-header>
-        <ion-card-title>Level: {{level.number}}</ion-card-title>
+        <ion-card-title>Level: {{level.levelNumber}}</ion-card-title>
       </ion-card-header>
 
       <ion-card-content>
