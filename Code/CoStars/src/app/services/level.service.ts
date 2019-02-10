@@ -1,31 +1,30 @@
+// this service acts as a helper to the level model
+// it will get and set the current level
+
 import { Injectable } from '@angular/core';
+import { Level } from '../models/level';
 
 @Injectable()
 export class LevelService {
 
-// set up the variables to be returned
-myLevel: any;
-levelNumber: number;
-actor1: string;
-actor2: string;
+// make a Level object
+myLevel: Level;
 
 constructor() {
-  this.myLevel = {
-    'levelNumber': this.levelNumber,
-    'actor1': this.actor1,
-    'actor2': this.actor2
-  };
+  // make a default level object for the current level
+  this.myLevel = new Level(0, '', '', '');
 }
 
-// set the level given the data
-setLevel(number, a1, a2) {
+// set the current level
+setLevel(number: number, n1: string, n2: string, gType: string) {
   this.myLevel.levelNumber = number;
-  this.myLevel.actor1 = a1;
-  this.myLevel.actor2 = a2;
+  this.myLevel.name1 = n1;
+  this.myLevel.name2 = n2;
+  this.myLevel.gameType = gType;
 }
 
 // return the object
-getLevel(): any {
+getLevel(): Level {
   return this.myLevel;
 }
 

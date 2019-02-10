@@ -5,48 +5,28 @@
   </ion-toolbar>
 </ion-header>
 
-<!--
-
-
-<ion-content>
-    <ion-item-group>
-      <ion-item-divider color="light" sticky>A</ion-item-divider>
-      <ion-item>Angola</ion-item>
-      <ion-item>Argentina</ion-item>
-      <ion-item>Angola</ion-item>
-      <ion-item>Argentina</ion-item>
-      <ion-item>Angola</ion-item>
-      <ion-item>Argentina</ion-item>
-      <ion-item>Angola</ion-item>
-      <ion-item>Argentina</ion-item>
-      <ion-item>Angola</ion-item>
-      <ion-item>Argentina</ion-item>
-
-      <ion-item>Angola</ion-item>
-      <ion-item>Argentina</ion-item>
-      <ion-item>Angola</ion-item>
-      <ion-item>Argentina</ion-item>
-    </ion-item-group>
-  </ion-content>
--->
 
 <ion-content>
   <ion-grid>
+    <!-- when calling the node component, 
+      send the current node and the  actual array -->
     <ion-item-group>
       <ion-row>
 
+        <!-- left game tree -->
         <ion-col text-center> 
-
-          
-          <app-tree-node [nodeName]="currLevel.actor1" [nodeType]="'actor'"></app-tree-node>
-          <app-tree-node [nodeName]="currLevel.actor1" [nodeType]="'actor'"></app-tree-node>
-
-
+          <app-tree-node *ngFor="let node of leftTree" 
+            [currNode]=node
+            [gameTree]=leftTree >
+          </app-tree-node>
         </ion-col>
-      
+
+        <!-- right game tree -->
         <ion-col text-center>
-          <app-tree-node [nodeName]="currLevel.actor2" [nodeType]="'actor'"></app-tree-node>
-          <app-tree-node [nodeName]="currLevel.actor2" [nodeType]="'actor'"></app-tree-node>
+            <app-tree-node *ngFor="let node of rightTree" 
+            [currNode]=node
+            [gameTree]=rightTree >
+          </app-tree-node>
         </ion-col>
 
       </ion-row>

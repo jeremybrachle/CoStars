@@ -1,8 +1,12 @@
 export class Level {
     constructor(
-      public number: number,
-      public actor1: string,
-      public actor2: string
+      // the current level
+      public levelNumber: number,
+      // strings for the beginning actor/movie
+      public name1: string,
+      public name2: string,
+      // string for game type (starting with 'actor' or 'film')
+      public gameType: string
       ) { }
   }
 

@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { NavController} from '@ionic/angular';
-
-
-import {Level} from '../../models/level';
+// model and service for level
+import { Level } from '../../models/level';
 import { LevelService } from '../../services/level.service';
 
 
@@ -16,16 +14,18 @@ export class LevelsPage implements OnInit {
 
   // make an object for navigating
   constructor(
-    public navCtrl: NavController,
-    private levelService: LevelService) { }
-  // constructor() { }
+    // make an instance of the level service (setting)
+    private levelService: LevelService
+  ) {}
 
   // generate the levels
   // will be pulled from a database eventually
   levels = [
-    new Level(1, 'George Clooney', 'Matt Damon'),
-    new Level(2, 'Tom Cruise', 'Ben Stiller'),
-    new Level(3, 'Leonardo DiCaprio', 'Robert Downey Jr.')
+    new Level(1, 'George Clooney', 'Matt Damon', 'actor'),
+    new Level(2, 'Tom Cruise', 'Ben Stiller', 'actor'),
+    new Level(2, 'Chamber of Secrets', 'Fantastic Beasts 1', 'film'),
+    new Level(4, 'Leonardo DiCaprio', 'Robert Downey Jr.', 'actor'),
+    new Level(5, 'Chris Evans', 'Chris Pine', 'actor')
   ];
 
 
@@ -36,8 +36,7 @@ export class LevelsPage implements OnInit {
   beginGame(currLevel: Level) {
 
     // set the level selected
-    this.levelService.setLevel(currLevel.number, currLevel.actor1, currLevel.actor2);
-
+    this.levelService.setLevel(currLevel.levelNumber, currLevel.name1, currLevel.name2, currLevel.gameType);
 
   }
 

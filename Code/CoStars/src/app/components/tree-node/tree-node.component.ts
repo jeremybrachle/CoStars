@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Node } from '../../models/node';
+
 
 @Component({
   selector: 'app-tree-node',
@@ -8,10 +10,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TreeNodeComponent implements OnInit {
 
   // accepts arguments from the game page
-  // name of node(actor's name or title of film)
-  @Input() nodeName: string;
-  // type of node (actor or movie)
-  @Input() nodeType: string;
+  // current node
+  @Input() currNode: Node;
+
+  // the actual array (for adding and deleting)
+  @Input() gameTree: Array<Node>;
 
   constructor() { }
 
@@ -19,12 +22,14 @@ export class TreeNodeComponent implements OnInit {
   }
 
   addNode() {
-    console.log(this.nodeName);
-    console.log(this.nodeType);
+    // push to the game tree
+    this.gameTree.push(this.currNode);
+
   }
 
   deleteNode() {
-    console.log('Delete Node!');
+    // pop dat node of da tree yo
+    this.gameTree.pop();
   }
 
 }

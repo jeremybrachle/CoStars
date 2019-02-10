@@ -4,15 +4,24 @@
   </div>
     
     <ion-card-content>
+
       <div>
-        <ion-icon name="person"></ion-icon>
-        <!-- <ion-icon name="videocam"></ion-icon> -->
+          <!-- Check to see what type the node is, 
+            this will determine what type of icon to show -->
+          <div *ngIf="currNode.type == 'actor'; else isFilm">
+              <ion-icon name="person"></ion-icon>
+          </div>
+          <ng-template #isFilm>
+              <ion-icon name="videocam"></ion-icon>
+          </ng-template>
       </div>
+
       <div >
         <label style="font-size: 0.6em;">
-          {{nodeName}}
+          {{currNode.name}}
         </label>
       </div>
+
     </ion-card-content>
 
   <div (click)="addNode()">
