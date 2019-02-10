@@ -1,5 +1,5 @@
 <ion-card>
-  <div (click)="deleteNode()">
+  <div *ngIf="currNode.isFirst == false" (click)="deleteNode()">
     <ion-icon color="customRed" name="remove-circle-outline"></ion-icon>
   </div>
     
@@ -24,7 +24,7 @@
 
     </ion-card-content>
 
-  <div (click)="addNode()">
+  <div *ngIf="currNode.isLast == true" (click)="addNode()">
     <ion-icon color="customGreen" name="add-circle-outline"></ion-icon>
   </div>
 </ion-card>
