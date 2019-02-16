@@ -103,5 +103,13 @@
     --ion-color-tint: #3ea541;
   }
 
+  // modal css (must be in a wrapper)
+  .add-node-modal .modal-wrapper {
+    height: 30%;
+    width: 90%;
+    position: fixed;
+    top: 20%;
+  }
+
 
 }

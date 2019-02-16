@@ -5,6 +5,7 @@
     
     <ion-card-content>
 
+      <!-- <ion-button (click)=callModal()>call modal</ion-button> -->
       <div>
           <!-- Check to see what type the node is, 
             this will determine what type of icon to show -->
@@ -29,7 +30,26 @@
   </div>
 </ion-card>
 
-<!-- some type of trailing to connect to next card: -->
-<div>
-    |
+<!-- trailing character to connect to next card if current node is not last -->
+<div *ngIf="currNode.isLast == false">
+    <!-- check to see if index of current element is divisible by two -->
+    <div *ngIf="gameTree.indexOf(currNode) % 2 == 0; else isOdd">
+      <!-- check to see what side -->
+      <div *ngIf="treeSide == 'left'; else isRight">
+        \
+      </div>
+      <ng-template #isRight>
+        /
+      </ng-template>
+    </div>
+
+    <ng-template #isOdd>
+      <!-- check to see what side -->
+      <div *ngIf="treeSide == 'left'; else isRight">
+          /
+        </div>
+        <ng-template #isRight>
+          \
+        </ng-template>
+    </ng-template>
 </div>

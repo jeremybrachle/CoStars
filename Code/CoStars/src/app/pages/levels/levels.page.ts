@@ -23,7 +23,7 @@ export class LevelsPage implements OnInit {
   levels = [
     new Level(1, 'George Clooney', 'Matt Damon', 'actor'),
     new Level(2, 'Tom Cruise', 'Ben Stiller', 'actor'),
-    new Level(2, 'Chamber of Secrets', 'Fantastic Beasts 1', 'film'),
+    new Level(3, 'Chamber of Secrets', 'Fantastic Beasts 1', 'film'),
     new Level(4, 'Leonardo DiCaprio', 'Robert Downey Jr.', 'actor'),
     new Level(5, 'Chris Evans', 'Chris Pine', 'actor')
   ];

@@ -17,7 +17,8 @@
         <ion-col text-center> 
           <app-tree-node *ngFor="let node of leftTree" 
             [currNode]=node
-            [gameTree]=leftTree >
+            [gameTree]=leftTree
+            [treeSide]="'left'" >
           </app-tree-node>
         </ion-col>
 
@@ -25,7 +26,8 @@
         <ion-col text-center>
             <app-tree-node *ngFor="let node of rightTree" 
             [currNode]=node
-            [gameTree]=rightTree >
+            [gameTree]=rightTree
+            [treeSide]="'right'" >
           </app-tree-node>
         </ion-col>
 

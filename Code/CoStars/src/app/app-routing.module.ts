@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'main', loadChildren: './pages/main/main.module#MainPageModule' },
   { path: 'levels', loadChildren: './pages/levels/levels.module#LevelsPageModule' },
   { path: 'game', loadChildren: './pages/game/game.module#GamePageModule' },
+  { path: 'add-node', loadChildren: './modals/add-node/add-node.module#AddNodePageModule' },
 ];
 
 @NgModule({

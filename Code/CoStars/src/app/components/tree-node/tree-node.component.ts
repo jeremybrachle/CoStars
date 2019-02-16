@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Node } from '../../models/node';
+import { GamePage } from '../../pages/game/game.page';
 
 
 @Component({
@@ -12,40 +13,44 @@ export class TreeNodeComponent implements OnInit {
   // accepts arguments from the game page
   // current node
   @Input() currNode: Node;
-
   // the actual array (for adding and deleting)
   @Input() gameTree: Array<Node>;
+  // side of the tree being updated
+  @Input() treeSide: string;
 
-  constructor() { }
+
+  // made an object for modal controller
+  // constructor(public modalController: ModalController) { }
+
+  constructor(
+    // make a game page object (needed for calling modal)
+    public gamePage: GamePage
+  ) {}
 
   ngOnInit() {
   }
 
-  addNode() {
-    // logic for adding to the game tree:
-    // make the current last element no longer the last
-    this.gameTree[this.gameTree.length - 1].isLast = false;
 
-    // build the new node to be added:
+  // function for adding a new node
+  // note: the actual pushing into the array will occur in the game page file
+  addNode() {
+    // set the new type
     // new type will be the opposite of the previous type
     let newType = '';
+    // check this tree's bottom-most type
     if (this.gameTree[this.gameTree.length - 1].type === 'actor') {
       newType = 'film';
     } else {
       newType = 'actor';
     }
-
-    // create the new node object
-    let newNode = new Node('new node', newType, false, true);
-
-    // push the newly build node
-    this.gameTree.push(newNode);
-
+    // send the new type and the tree side to the modal
+    this.gamePage.addNodeFromModal(newType, this.treeSide);
   }
 
+  // function for removing the current node and all nodes below
   deleteNode() {
     // pop dat node of da tree yo
-    // this will pop the click node and any node below it
+    // this will pop the clicked node and all nodes below it
     // check to see how many nodes will be popped
     // (number of pops) = (array size) - (index of current node)
     let pops = (this.gameTree.length) - (this.gameTree.indexOf(this.currNode));

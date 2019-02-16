@@ -1,0 +1,21 @@
+<ion-header text-center>
+  Add Node
+</ion-header>
+
+<br>
+
+<ion-content text-center padding>
+    <ion-input 
+      placeholder="Name:"
+      [(ngModel)]="newName"
+      style="border-style: groove;"
+    ></ion-input>
+
+    
+    
+</ion-content>
+
+<ion-footer text-center>
+  <ion-button color="customDarkGrey" (click)="closeModal()">Cancel</ion-button>
+  <ion-button (click)="sendName()">Add</ion-button>
+</ion-footer>
