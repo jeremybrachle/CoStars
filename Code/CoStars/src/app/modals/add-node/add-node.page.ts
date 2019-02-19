@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ModalController} from '@ionic/angular';
 
 @Component({
@@ -10,6 +10,9 @@ export class AddNodePage implements OnInit {
 
   // name of new node to be created
   newName: String;
+
+  // input of the new type
+  @Input() newType;
 
   constructor(
     // make modal object

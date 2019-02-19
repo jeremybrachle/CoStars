@@ -80,7 +80,8 @@ export class GamePage implements OnInit {
     // create the modal and connect its component
     const modal = await this.modalController.create({
       component: AddNodePage,
-      cssClass: 'add-node-modal'
+      cssClass: 'add-node-modal',
+      componentProps: {newType: newType}
     });
 
     // show the modal

@@ -103,6 +103,15 @@
     --ion-color-tint: #3ea541;
   }
 
+  .ion-color-customYellow {
+    --ion-color-base: #F7BA00;
+    --ion-color-base-rgb: 247, 168, 0;
+    --ion-color-contrast: #000000;
+    --ion-color-contrast-rgb: 0, 0, 0;
+    --ion-color-shade: #F7BA00;
+    --ion-color-tint: #F7BA00;
+  }
+
   // modal css (must be in a wrapper)
   .add-node-modal .modal-wrapper {
     height: 30%;
