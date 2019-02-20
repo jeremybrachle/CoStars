@@ -8,13 +8,9 @@ import { Node } from '../../models/node';
 import { LevelService } from '../../services/level.service';
 
 // modal connection
-import { ModalController, NavParams } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
 import { AddNodePage } from '../../modals/add-node/add-node.page';
-
-
-// tree node
-// import { TreeNodeComponent } from '../../components/tree-node/tree-node.component';
-
+import { InfoModalPage } from '../../modals/info-modal/info-modal.page';
 
 
 
@@ -26,7 +22,6 @@ import { AddNodePage } from '../../modals/add-node/add-node.page';
 export class GamePage implements OnInit {
 
   // variables
-
   // level object for holding the level data
   currLevel: Level;
   // arrays for the game tree:
@@ -35,13 +30,10 @@ export class GamePage implements OnInit {
   // right tree
   rightTree = new Array;
 
-  // return values from modal
-  // name: String;
-
   // begin code:
   constructor(
     // make an instance of the level service (getting)
-    private levelSelect: LevelService,
+    private levelService: LevelService,
     public modalController: ModalController
     // public treeNode: TreeNodeComponent
   ) {}
@@ -49,7 +41,7 @@ export class GamePage implements OnInit {
   // when page loads
   ngOnInit() {
     // load the selected game
-    this.currLevel = this.levelSelect.getLevel();
+    this.currLevel = this.levelService.getLevel();
 
     // set up the game trees with the initial nodes
     // use 'let' since the attributes will change as the user adds to the tree
@@ -74,6 +66,20 @@ export class GamePage implements OnInit {
     this.rightTree.push(initNodeRight);
   }
 
+
+  // function for showing the info modal
+  async showInfo() {
+    // create the modal and connect its component
+    const iModal = await this.modalController.create({
+      component: InfoModalPage,
+      cssClass: ''
+    });
+
+    // show the modal
+    await iModal.present();
+
+
+  }
 
   // modal connection (will be called only from the tree node component)
   async addNodeFromModal(newType: string, treeSide: string) {
@@ -117,6 +123,45 @@ export class GamePage implements OnInit {
           }
         }
     });
+  }
+
+  // function for checking the game tree validity. for right now, only see if nodes match up... no db functionality yet :(
+  checkGame() {
+    // make sure bottom element of each tree have opposite type (this is done through the disabled boolean in the html)
+    // later the program will check to see if the actual node names are correct for their movies
+    // for now just return the tree depth they ended up with
+    // depth = (length of longest tree - 1)
+    if (this.leftTree.length > this.rightTree.length) {
+      console.log('Score: ' + (this.leftTree.length - 1));
+    } else {
+      console.log('Score: ' + (this.rightTree.length - 1));
+    }
+
+    // add functionality for changing the star icon on the main page since the level is won...
+  }
+
+  // function for clearing the current game (pop both trees until only the given nodes are left)
+  clearGame() {
+    // pop the left tree
+    let popLeft = this.leftTree.length - 1;
+
+    // loop and pop the nodes
+    for (let i = 0; i < popLeft; i++) {
+      this.leftTree.pop();
+    }
+    // now assign the bottom most node as the last
+    this.leftTree[0].isLast = true;
+
+    // now do the same for the right tree
+    let popRight = this.rightTree.length - 1;
+
+    // loop and pop the nodes
+    for (let i = 0; i < popRight; i++) {
+      this.rightTree.pop();
+    }
+    // now assign the bottom most node as the last
+    this.rightTree[0].isLast = true;
+
   }
 
 }

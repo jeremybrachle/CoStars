@@ -1,7 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Level {{currLevel.levelNumber}}</ion-title>
+
     <ion-back-button text="Exit" [routerLink]="['/levels']"></ion-back-button>
+    
+    <ion-title>Level {{currLevel.levelNumber}}</ion-title>
+
+    <ion-buttons slot="primary" style="margin-right: 1em;">
+      <ion-icon name="information-circle-outline" (click)="showInfo()"></ion-icon>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
@@ -9,7 +16,7 @@
 <ion-content>
   <ion-grid>
     <!-- when calling the node component, 
-      send the current node and the  actual array -->
+      send the current node, the  actual array, and the side of the tree -->
     <ion-item-group>
       <ion-row>
 
@@ -35,6 +42,25 @@
     </ion-item-group>
   </ion-grid>
 </ion-content>
+
+<ion-footer text-center>
+    <ion-toolbar>
+      <ion-button 
+      color="danger"
+      [disabled]="this.leftTree.length <= 1 && this.rightTree.length <= 1"
+      (click)="clearGame()">
+        Clear Trees
+      </ion-button>
+      
+        <ion-button 
+          color="customDarkGrey" 
+          [disabled]="this.leftTree[this.leftTree.length - 1].type === this.rightTree[this.rightTree.length - 1].type" 
+          (click)="checkGame()"
+          [routerLink]="['/levels']">
+            Complete Game
+          </ion-button>
+    </ion-toolbar>
+</ion-footer>
 
 
 <!--

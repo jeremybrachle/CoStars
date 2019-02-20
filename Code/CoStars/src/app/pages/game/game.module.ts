@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { GamePage } from './game.page';
 import { TreeNodeComponent } from '../../components/tree-node/tree-node.component';
 import { AddNodePage } from '../../modals/add-node/add-node.page';
+import { InfoModalPage } from 'src/app/modals/info-modal/info-modal.page';
 
 const routes: Routes = [
   {
@@ -23,7 +24,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [GamePage, TreeNodeComponent, AddNodePage],
-  entryComponents: [AddNodePage]
+  declarations: [GamePage, TreeNodeComponent, AddNodePage, InfoModalPage],
+  entryComponents: [AddNodePage, InfoModalPage]
 })
 export class GamePageModule {}

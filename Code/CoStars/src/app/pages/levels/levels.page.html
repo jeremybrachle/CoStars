@@ -2,18 +2,37 @@
   <ion-toolbar>
     <ion-title>Select Level</ion-title>
     <ion-back-button text="Title" [routerLink]="['/main']"></ion-back-button>
+    <ion-buttons slot="primary" style="margin-right: 1em;">
+        <ion-icon name="settings" (click)="showSettings()"></ion-icon>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-list>
+  <ion-list>
     <ion-card *ngFor="let level of levels" (click)="beginGame(level)" [routerLink]="['/game']">
       <ion-card-header>
-        <ion-card-title>Level: {{level.levelNumber}}</ion-card-title>
+        <ion-card-title>
+          <div style="float: left;">
+            Level: {{level.levelNumber}}
+          </div>
+          <div *ngIf="level.isSolved === false; else isWon">
+            <ion-icon style="float: right;"  name="star-outline"></ion-icon>
+          </div>
+          <ng-template #isWon>
+              <ion-icon style="float: right; color: #F7BA00;" name="star"></ion-icon>
+          </ng-template>
+          
+        </ion-card-title>
       </ion-card-header>
-
+      <br>
       <ion-card-content>
-        {{level.name1}} <br> {{level.name2}}
+        <p style="margin-bottom: 1em;">
+          {{level.name1}}
+        </p> 
+        <p>
+          {{level.name2}}
+        </p>
       </ion-card-content>
     </ion-card>
   </ion-list>

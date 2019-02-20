@@ -4,6 +4,12 @@ import { Component, OnInit } from '@angular/core';
 import { Level } from '../../models/level';
 import { LevelService } from '../../services/level.service';
 
+// modal controller
+import { ModalController } from '@ionic/angular';
+
+
+// settings modal
+import { SettingsModalPage } from '../../modals/settings-modal/settings-modal.page';
 
 @Component({
   selector: 'app-levels',
@@ -15,17 +21,18 @@ export class LevelsPage implements OnInit {
   // make an object for navigating
   constructor(
     // make an instance of the level service (setting)
-    private levelService: LevelService
+    private levelService: LevelService,
+    public modalController: ModalController
   ) {}
 
   // generate the levels
   // will be pulled from a database eventually
   levels = [
-    new Level(1, 'George Clooney', 'Matt Damon', 'actor'),
-    new Level(2, 'Tom Cruise', 'Ben Stiller', 'actor'),
-    new Level(3, 'Chamber of Secrets', 'Fantastic Beasts 1', 'film'),
-    new Level(4, 'Leonardo DiCaprio', 'Robert Downey Jr.', 'actor'),
-    new Level(5, 'Chris Evans', 'Chris Pine', 'actor')
+    new Level(1, 'George Clooney', 'Matt Damon', 'actor', true),
+    new Level(2, 'Tom Cruise', 'Ben Stiller', 'actor', false),
+    new Level(3, 'Harry Potter and the Chamber of Secrets', 'Fantastic Beasts and Where to Find Them', 'film', false),
+    new Level(4, 'Leonardo DiCaprio', 'Robert Downey Jr.', 'actor', false),
+    new Level(5, 'Chris Evans', 'Chris Pine', 'actor', false)
   ];
 
 
@@ -34,10 +41,20 @@ export class LevelsPage implements OnInit {
 
   // function for beginning game given the level
   beginGame(currLevel: Level) {
-
     // set the level selected
-    this.levelService.setLevel(currLevel.levelNumber, currLevel.name1, currLevel.name2, currLevel.gameType);
+    this.levelService.setLevel(currLevel.levelNumber, currLevel.name1, currLevel.name2, currLevel.gameType, currLevel.isSolved);
+  }
 
+  // show the setting modal
+  async showSettings() {
+    // create the modal and connect its component
+    const modal = await this.modalController.create({
+      component: SettingsModalPage,
+      cssClass: ''
+    });
+
+    // show the modal
+    await modal.present();
   }
 
 }

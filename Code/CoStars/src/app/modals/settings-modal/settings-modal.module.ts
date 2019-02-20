@@ -5,13 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LevelsPage } from './levels.page';
-import { SettingsModalPage } from '../../modals/settings-modal/settings-modal.page';
+import { SettingsModalPage } from './settings-modal.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: LevelsPage
+    component: SettingsModalPage
   }
 ];
 
@@ -22,7 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [LevelsPage, SettingsModalPage],
-  entryComponents: [SettingsModalPage]
+  declarations: [SettingsModalPage]
 })
-export class LevelsPageModule {}
+export class SettingsModalPageModule {}

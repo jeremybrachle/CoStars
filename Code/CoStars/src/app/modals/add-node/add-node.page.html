@@ -11,6 +11,7 @@
       placeholder="Name:"
       [(ngModel)]="newName"
       style="border-style: groove;"
+      (keyup.enter)="sendName()"
     ></ion-input>
 
     

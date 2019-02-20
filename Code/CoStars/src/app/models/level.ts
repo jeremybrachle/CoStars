@@ -6,7 +6,9 @@ export class Level {
       public name1: string,
       public name2: string,
       // string for game type (starting with 'actor' or 'film')
-      public gameType: string
+      public gameType: string,
+      // boolean for if the level has been beaten
+      public isSolved: boolean
       ) { }
   }
 
