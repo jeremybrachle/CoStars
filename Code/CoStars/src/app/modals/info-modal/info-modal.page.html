@@ -2,8 +2,10 @@
   <ion-toolbar>
     <ion-title>Info</ion-title>
 
-    <ion-buttons slot="primary" (click)="closeModal()" style="margin-right: 1em;">
-        <ion-icon name="close-circle-outline"></ion-icon>
+    <ion-buttons slot="primary" (click)="this.modalController.dismiss();" style="margin-right: 1em;">
+      <ion-button style="color: #3881FF;">
+        Close
+      </ion-button>
     </ion-buttons>
 
   </ion-toolbar>

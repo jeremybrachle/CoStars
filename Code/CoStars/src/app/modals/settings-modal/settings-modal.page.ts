@@ -16,10 +16,4 @@ export class SettingsModalPage implements OnInit {
   ngOnInit() {
   }
 
-  // close the modal
-  closeModal() {
-    // dimiss the modal
-    this.modalController.dismiss();
-  }
-
 }
